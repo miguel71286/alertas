@@ -97,7 +97,7 @@ const App = () => {
   const [copia, setCopia] = useState([]);
   const añadirElementosEncontrados = (buscador) => {
     const elementosEncontrados = copia.filter((elemento) => {
-      return elemento.Reminder.toLowerCase().startsWith(buscador.toLowerCase());
+      return elemento.reminder.toLowerCase().startsWith(buscador.toLowerCase());
     });
     setAlertas(elementosEncontrados);
   };
