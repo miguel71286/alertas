@@ -82,7 +82,7 @@ const App = () => {
     });
 
     var requestOptions = {
-      method: "PUT",
+      method: "PATCH",
       headers: myHeaders,
       body: raw,
       redirect: "follow",
