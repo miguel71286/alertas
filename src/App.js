@@ -34,7 +34,7 @@ const App = () => {
       redirect: "follow",
     };
 
-    await fetch(`https://git.heroku.com/alerts-ma.git/${id}`, requestOptions)
+    await fetch(`${url}/${id}`, requestOptions)
       .then((response) => response.text())
       .then((result) => console.log(result))
       .catch((error) => console.log("error", error));
@@ -48,10 +48,10 @@ const App = () => {
     myHeaders.append("Content-Type", "application/json");
 
     var raw = JSON.stringify({
-      Reminder: alerta.reminder,
-      Veces: alerta.veces,
-      Fecha: alerta.fecha,
-      Notas: alerta.notas,
+      reminder: alerta.reminder,
+      veces: alerta.veces,
+      fecha: alerta.fecha,
+      notas: alerta.notas,
     });
 
     var requestOptions = {
@@ -61,7 +61,7 @@ const App = () => {
       redirect: "follow",
     };
 
-    await fetch("https://git.heroku.com/alerts-ma.git", requestOptions)
+    await fetch(url, requestOptions)
       .then((response) => response.text())
       .then((result) => console.log(result))
       .catch((error) => console.log("error", error));
@@ -75,10 +75,10 @@ const App = () => {
     myHeaders.append("Content-Type", "application/json");
 
     var raw = JSON.stringify({
-      Reminder: alerta.reminder,
-      Veces: alerta.veces,
-      Fecha: alerta.fecha,
-      Notas: alerta.notas,
+      reminder: alerta.reminder,
+      veces: alerta.veces,
+      fecha: alerta.fecha,
+      notas: alerta.notas,
     });
 
     var requestOptions = {
@@ -88,7 +88,7 @@ const App = () => {
       redirect: "follow",
     };
 
-    await fetch(`https://git.heroku.com/alerts-ma.git/${alerta.id}`, requestOptions)
+    await fetch(`${url}/${alerta.id}`, requestOptions)
       .then((response) => response.text())
       .catch((error) => console.log("error", error));
     recuperaDatos();

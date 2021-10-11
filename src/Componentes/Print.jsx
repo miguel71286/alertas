@@ -20,7 +20,7 @@ const Print = (props) => {
             swal("Poof! Your imaginary file has been deleted!", {
               icon: "error",
             });
-            eliminarAlerta(listadoFinal.id);
+            eliminarAlerta(listadoFinal._id);
           } else {
             swal( {
               icon: "success",
@@ -55,7 +55,7 @@ const Print = (props) => {
     }
 
     const modificaAlerta = {
-      id: listadoFinal.id,
+      id: listadoFinal._id,
       reminder: modificaReminder,
       veces: modificaVeces,
       fecha: modificaFecha,
