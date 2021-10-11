@@ -5,6 +5,7 @@ import Navbar from "./Componentes/Navbar";
 import CreaAlerta from "./Componentes/CreaAlerta";
 
 const App = () => {
+  console.log('hola');
   const url = process.env.REACT_APP_BACKEND_URL;
 
   const [alertas, setAlertas] = useState([]);
